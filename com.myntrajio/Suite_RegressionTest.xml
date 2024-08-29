@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RegresstionSuite">
+
+	<listeners>
+		<listener
+			class-name="com.myntrajio.generic.listenerlibrary.ListenerImplementation"></listener>
+	</listeners>
+
+	<!--ChromeTest -->
+	<test thread-count="5" name="ChromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class
+				name="com.myntrajio.ElectronicProductTest.ElectronicProductTest" />
+		</classes>
+	</test>
+	<!--ChromeTest -->
+
+
+	<!--FirefoxTest -->
+	<test thread-count="5" name="FirefoxTest">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.myntrajio.KidsproductTest.KidsProductTest" />
+		</classes>
+	</test>
+	<!--FirefoxTest -->
+
+
+	<!--EdgeTest -->
+	<test thread-count="5" name="EdgeTest">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.myntrajio.MensProductTest.MensProductTest" />
+			<class name="com.myntrajio.WoMensProductTest.WoMensProductTest" />
+		</classes>
+	</test>
+	<!--EdgeTest -->
+
+</suite> <!--RegresstionSuite -->
