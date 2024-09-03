@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.myntrajio.generic.commonlibrary.FrameworkConstant;
 
 
-public class WebDriverLibrary{
+public class WebDriverLibrary implements FrameworkConstant{
 	public static WebDriver static_driver;
 	public WebDriver driver;
 	public Actions action;
@@ -60,10 +60,6 @@ public class WebDriverLibrary{
 		return driver;
 	}
 	
-	
-	
-
-
 	/**
 	 * This method maximizes the browser
 	 */
@@ -87,8 +83,8 @@ public class WebDriverLibrary{
 	 * 
 	 * @param time
 	 */
-	public void waitUntilElementFound(long time) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
+	public void waitUntilElementFound() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitduration));
 	}
 
 	/**

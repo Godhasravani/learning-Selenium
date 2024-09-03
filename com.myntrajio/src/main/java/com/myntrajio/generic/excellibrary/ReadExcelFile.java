@@ -17,12 +17,12 @@ public class ReadExcelFile implements FrameworkConstant {
 	public FileOutputStream fos = null;
 	public Workbook wb = null;
 
-	public void readData(String sheet, int row, int column) {
+	public String readData(String sheet, int row, int column) {
 		// step1:convert physical file to java readable object by using file inputstream
 		// class
 
 		try {
-			fis = new FileInputStream("./src/test/resources/data/testdata.xlxs");
+			fis = new FileInputStream(excelpath);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -47,6 +47,7 @@ public class ReadExcelFile implements FrameworkConstant {
 		}
 		// step5:print the data
 		System.out.println(data);
+		return data;
 	}
 
 	public void writeData() {

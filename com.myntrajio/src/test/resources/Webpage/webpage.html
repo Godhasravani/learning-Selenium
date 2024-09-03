@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEarning WEB TECHNOLOGY FORMS</title>
+    <title>LearningSelenium</title>
   </head>
   <body>
        <form autocomplete="off" target="_blank" novalidate>
@@ -18,7 +18,6 @@
                 type="text"
                 id="name"
                 name="name"
-                class="123 456 789 nm"
                 placeholder="Enter your name"
                 required
                 value="Tillu Radhika"
@@ -33,7 +32,6 @@
                 type="email"
                 id="email"
                 name="email"
-                class="123 456 789 eml"
                 placeholder="Enter your email"
               />
             </td>
@@ -41,7 +39,7 @@
           <tr>
             <td><label for="password">Password:</label></td>
             <td>
-              <input type="password" id="password"  class="123 456 789 psw" name="password"    placeholder="Enter your Password" required />
+              <input type="password" id="password" name="password"    placeholder="Enter your Password" required />
             </td>
           </tr>
           <tr>
@@ -51,7 +49,6 @@
                 type="tel"
                 id="mobile"
                 name="mobile"
-                class="123 456 789 mb"
    placeholder="Enter your Mobile No "
                
                 maxlength="10"
@@ -115,12 +112,19 @@
           <tr>
             <td><label for="country">Country:</label></td>
             <td>
-              <select name="country">
-                <option>INDIA</option>
-                <option>AUSTRALIA</option>
-                <option>USA</option>
-                <option>CANADA</option>
-                <option>SWITZERLAND</option>
+              <select name="country1">
+                <option value="ind">INDIA</option>
+                <option value="aus">AUSTRALIA</option>
+                <option value="usa">USA</option>
+                <option value="cnd">CANADA</option>
+                <option value="swiss">SWITZERLAND</option>
+              </select>
+              <select name="country2" multiple>
+                <option value="ind">INDIA</option>
+                <option value="aus">AUSTRALIA</option>
+                <option value="usa">USA</option>
+                <option value="cnd">CANADA</option>
+                <option value="swiss">SWITZERLAND</option>
               </select>
             </td>
           </tr>
@@ -143,12 +147,10 @@
           <tr>
             <td>
                 <input type="submit" value="Register" />
+                <a href="https://www.orangehrm.com/">Contact Us</a>
             </td>
-            <td><a href="https://placements.qspiders.com/">Contact Us</a></td>
           </tr>
         </table>
-
-
       </fieldset>
     </form>
   </body>
