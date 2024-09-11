@@ -11,6 +11,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
 //import com.myntrajio.generic.webdriverlibrary.WebDriverLibrary;
 
 public class BaseTest extends ObjectLibrary {
@@ -22,6 +24,26 @@ public class BaseTest extends ObjectLibrary {
 
 	@BeforeTest
 	public void precondition() {
+		
+		//create object for all library
+		createObject();
+		
+		//configure the spark report information
+		spark.config().setDocumentTitle("Regression testing for the register page");
+		spark.config().setReportName("Regression Suite");
+		spark.config().setTheme(Theme.DARK);
+		
+		
+		//attach the spark report and extent repork
+		report.attachReporter(spark);
+		
+		//configure the system information in extent report
+		report.setSystemInfo("device Name:","Sravani");
+		report.setSystemInfo("Os:","Windows 10");
+		report.setSystemInfo("Browser name:","Chrome");
+		report.setSystemInfo("Browser Version:","chrome-128.0.6613.121");
+
+		
 		Reporter.log("Precondition Done Sucessful", true);
 		
 		
@@ -31,9 +53,12 @@ public class BaseTest extends ObjectLibrary {
 	@Parameters("browser")//from suite file it will execute
 	@BeforeClass
 	public void browserSetup(String bname) {
+		//create the test report
+		test=report.createTest("RegisterTest");
+		
 
 		// Create Object For All Library
-		createObject();
+	//	createObject();
 
 		// Step 1:Launch the Browser
 		webdriverlibrary.launchBrowser(bname);
@@ -71,6 +96,8 @@ public class BaseTest extends ObjectLibrary {
 
 	@AfterTest
 	public void postcondition() {
+		//Flush the report information
+		report.flush();
 		Reporter.log("postcondition Done Sucessful", true);
 	}
 

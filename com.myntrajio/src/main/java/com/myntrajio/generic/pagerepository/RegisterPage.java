@@ -28,29 +28,25 @@ public class RegisterPage
 	@FindBy(id="feedback")
 	private WebElement feedbacktextfield;
 	
-	
 	@FindBy(id="female")
 	private WebElement femaleradiobutton;
 	
-	
 	@FindBy(id="bangalore")
 	private WebElement banglorecheckbox;
-
+	
+	
 	
 	public WebElement getNametextfield() {
 		return nametextfield;
 	}
 
-
 	public WebElement getEmailtextfield() {
 		return emailtextfield;
 	}
 
-
 	public WebElement getPasswordtextfield() {
 		return passwordtextfield;
 	}
-
 
 	public WebElement getMobiletextfield() {
 		return mobiletextfield;
@@ -67,7 +63,4 @@ public class RegisterPage
 	public WebElement getbanglorecheckbox() {
 		return banglorecheckbox;
 	}
-
-	
-
 }
