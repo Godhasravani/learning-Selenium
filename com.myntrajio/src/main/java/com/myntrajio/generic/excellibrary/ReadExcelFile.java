@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import com.myntrajio.generic.commonlibrary.FrameworkConstant;
 
 public class ReadExcelFile implements FrameworkConstant {
-
+	
 	public FileInputStream fis = null;
 	public FileOutputStream fos = null;
 	public Workbook wb = null;
@@ -20,7 +20,7 @@ public class ReadExcelFile implements FrameworkConstant {
 	public String readData(String sheet, int row, int column) {
 		// step1:convert physical file to java readable object by using file inputstream
 		// class
-
+ 
 		try {
 			fis = new FileInputStream(excelpath);
 
